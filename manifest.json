@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Defog",
+    "version": "1.0",
+    "description": "A tool to help you remove distractions from youtube.",
+  
+    "permissions": ["tabs", "storage"],
+  
+    "action": {
+      "default_popup": "pop.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+  
+    "host_permissions": ["*://*.youtube.com/*"],
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
