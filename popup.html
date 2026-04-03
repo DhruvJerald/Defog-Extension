@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Defog</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Defog Dashboard</h1>
+
+      <div class="card">
+        <h2>Distraction Blockers</h2>
+      
+        <div class="toggle-group">
+          <span class="label">Block Shorts 🎬</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleShorts">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+        <div class="toggle-group">
+          <span class="label">Block Homepage</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleHome">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+        <div class="toggle-group">
+          <span class="label">Block Trending</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleTrending">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+        <div class="toggle-group">
+          <span class="label">Block Autoplay</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleAutoplay">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+        <div class="toggle-group">
+          <span class="label">Block Comments</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleComments">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+        <div class="toggle-group">
+          <span class="label">Block Sidebar 📺</span>
+          <label class="switch">
+            <input type="checkbox" id="toggleSidebar">
+            <span class="slider"></span>
+          </label>
+        </div>
+      
+      </div>
+
+    <div class="card">
+      <h2>Focus Timer</h2>
+      <input type="number" id="customMinutes" placeholder="Minutes" min="1" max="120">
+      <button id="startTimer">Start</button>
+      <button id="stopTimer">Stop</button>
+      <div class="progress-ring">
+        <svg width="100" height="100">
+          <circle id="progressCircle" stroke="#22c55e" stroke-width="8" fill="transparent" r="45" cx="50" cy="50"/>
+        </svg>
+      </div>
+      <p id="timerDisplay">00:00</p>
+    </div>
+
+    <div class="card">
+      <h2>Stats</h2>
+      <p id="statsDisplay">Loading...</p>
+    </div>
+
+    <div class="card">
+      <h2>Theme</h2>
+      <button id="toggleTheme">Toggle Dark/Light</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
